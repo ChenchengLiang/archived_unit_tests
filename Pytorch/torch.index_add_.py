@@ -2,8 +2,11 @@ import numpy as np
 import random
 import torch
 if __name__ == '__main__':
+    '''
+    The problem is still open:
+    Sorted the index but still non-deterministic
+    '''
 
-    # test()
     n=50
     np.random.seed(42)
     random.seed(42)
@@ -33,6 +36,7 @@ if __name__ == '__main__':
             print(y)
             print(x==y)
 
+    #print overall comparison
     print("-" * 10)
     compare=dst1.flatten()==dst2.flatten()
     print(torch.all(compare))
